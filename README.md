@@ -76,13 +76,6 @@ for m in methods:
 ---
 
 ## Results
-For this program, I choose to use an image with a lot of information and try to find a specific item on it.
-
-![Full Image](./images/mechanics-garage-kyle-simpson.jpg "Full Image")
-
-So I extracted this screwdriver from the full image choose it to be the matched image.
-
-![To be matched](./images/screwdriver.png "To be matched")
 
 And these are the results for all the six tested methods:
 
