@@ -8,11 +8,19 @@ Template matching is one of the simplest form of object detection, where it simp
 According to [OpenCV Documentation](https://docs.opencv.org/4.x/d4/dc6/tutorial_py_template_matching.html), *"It simply slides the template image over the input image (as in 2D convolution) and compares the template and patch of input image under the template image."*
 It is important to keep in mind that this will only work with a "perfect match" while using correlation.
 
-Here I'll be using six different methods in order to better visualize which one performs better in this case.
+For this project, it was utilized a very "messy" image which contains a lot of information just to see if it somehow will get any adicional dificculty for the algorithm to correctly match the template.
+
+![Full Image](./images/mechanics-garage-kyle-simpson.jpg "Full Image")
+
+And the template is gonna be a little chunck of the full image that contains a screwdriver on it:
+
+![Template](./images/screwdriver.jpg "Screwdriver")
+
+Also, here in this project I'll be using six different methods in order to better visualize which one performs better in this case.
 
 The six methods are:
 
-<center>![Template Match Modes](./images/template-match-modes.png "Template Match Modes")</center>
+![Template Match Modes](./images/template-match-modes.png "Template Match Modes")
 
 In Python3, they can be applied using the following code:
 
@@ -70,32 +78,32 @@ for m in methods:
 ## Results
 For this program, I choose to use an image with a lot of information and try to find a specific item on it.
 
-<center>![Full Image](./images/mechanics-garage-kyle-simpson.jpg "Full Image")</center>
+![Full Image](./images/mechanics-garage-kyle-simpson.jpg "Full Image")
 
 So I extracted this screwdriver from the full image choose it to be the matched image.
 
-<center>![To be matched](./images/screwdriver.png "To be matched")</center>
+![To be matched](./images/screwdriver.png "To be matched")
 
 And these are the results for all the six tested methods:
 
-<center>![CCOEFF model](./images/cv2.TM_CCOEFFmodel.png "CCOEFF model")</center>
+![CCOEFF model](./images/cv2.TM_CCOEFFmodel.png "CCOEFF model")
 
-<center>![CCOEFF NORMED model](./images/cv2.TM_CCOEFF_NORMEDmodel.png "CCOEFF NORMED model")</center>
+![CCOEFF NORMED model](./images/cv2.TM_CCOEFF_NORMEDmodel.png "CCOEFF NORMED model")
 
-<center>![CCORR model](./images/cv2.TM_CCORRmodel.png "CCORR model")</center>
+![CCORR model](./images/cv2.TM_CCORRmodel.png "CCORR model")
 
-<center>![CCORR NORMED model](./images/cv2.TM_CCORR_NORMEDmodel.png "CCORR NORMED model")</center>
+![CCORR NORMED model](./images/cv2.TM_CCORR_NORMEDmodel.png "CCORR NORMED model")
 
-</center>![SQDIFF model](./images/cv2.TM_SQDIFFmodel.png "SQDIFF model")</center>
+![SQDIFF model](./images/cv2.TM_SQDIFFmodel.png "SQDIFF model")
 
-<center>![SQDIFF NORMED model](./images/cv2.TM_SQDIFF_NORMEDmodel.png "SQDIFF NORMED model")</center>
+![SQDIFF NORMED model](./images/cv2.TM_SQDIFF_NORMEDmodel.png "SQDIFF NORMED model")
 
 
 As it is possible to notice, except for the CCORR model, all the methods successfully matched the template with the full image!
 
 Its important to notice that the result image is basically a heat map (correlation map), where the highest point is the matching point between the image and the template. This happens because once we correlate the filter(template) with the image, when the filter lands right on the spot of the image it was taken from, we get the maximum value and thus the "hottest" point on the heat map.
 
-<center>![](./images/screenshot.png)</center>
+![](./images/screenshot.png)
 
 ## NEXT STEPS
 
