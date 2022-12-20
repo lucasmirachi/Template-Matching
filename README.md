@@ -1,5 +1,7 @@
 # Template-Matching using OpenCV
- A template matching program I developed using OpenCV.
+ A template matching program I developed using OpenCV and Python3.
+
+ The code for this project can be fount in [this Jupyter Notebook](https://github.com/lucasmirachi/Template-Matching/blob/main/template-matching.ipynb)
 
 ## Introduction
 
@@ -27,7 +29,8 @@ In Python3, they can be applied using the following code:
 ```
 # All the 6 methods for comparison in a list
 # At first, I'll be using strings, but later on the eval() function will be used in order to convert to function
-methods = ['cv2.TM_CCOEFF', 'cv2.TM_CCOEFF_NORMED', 'cv2.TM_CCORR','cv2.TM_CCORR_NORMED', 'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED']
+methods = ['cv2.TM_CCOEFF', 'cv2.TM_CCOEFF_NORMED', 'cv2.TM_CCORR',
+           'cv2.TM_CCORR_NORMED', 'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED']
 
 for m in methods:
     
