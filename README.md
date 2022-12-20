@@ -1,14 +1,14 @@
 # Template-Matching using OpenCV
  A template matching program I developed using OpenCV and Python3.
 
- The code for this project can be fount in [this Jupyter Notebook](https://github.com/lucasmirachi/Template-Matching/blob/main/template-matching.ipynb)
+ The code for this project can be fount in [this Jupyter Notebook](https://github.com/lucasmirachi/Template-Matching/blob/main/template-matching.ipynb).
 
 ## Introduction
 
 Template matching is one of the simplest form of object detection, where it simply scans a larger image for a provided template by sliding the template target image across the larger image. 
 
 According to [OpenCV Documentation](https://docs.opencv.org/4.x/d4/dc6/tutorial_py_template_matching.html), *"It simply slides the template image over the input image (as in 2D convolution) and compares the template and patch of input image under the template image."*
-It is important to keep in mind that this will only work with a "perfect match" while using correlation.
+It is important to keep in mind that this will only work with a "perfect match" while using correlation - to work correctly, the template image has to be an extracted piece of image taken from the "full image".
 
 For this project, it was utilized a very "messy" image which contains a lot of information just to see if it somehow will get any adicional dificculty for the algorithm to correctly match the template.
 
